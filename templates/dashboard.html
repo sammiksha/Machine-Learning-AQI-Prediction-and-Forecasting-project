@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AQI Dashboard — Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:white"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13v6l5 3-1 1.7-6-3.7V7h2z"/></svg>
+      </div>
+      <div class="logo-text">AQI <span>Forecast</span></div>
+    </div>
+    <nav>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/dashboard" class="nav-link active">Dashboard</a>
+    </nav>
+  </div>
+</header>
+
+<div class="statsbar">
+  <div class="container">
+    <div class="dash-hero">
+      <h1 class="dash-title">Analysis <em>Dashboard</em></h1>
+      <p class="dash-sub">Historical trends · Pollutant breakdown · AQI distribution</p>
+      <button class="btn btn-primary" style="width:auto;padding:11px 32px" onclick="loadAllCharts()">
+        ↻ &nbsp;Load All Charts
+      </button>
+    </div>
+  </div>
+</div>
+
+<main class="main container">
+
+  <div id="dashLoading" class="loading-text" style="text-align:center;padding:50px 0;font-size:0.9rem">
+    Click "Load All Charts" to view your data analysis…
+  </div>
+
+  <div id="dashContent" class="hidden">
+
+    <!-- Chart 1: Historical line — full width -->
+    <div class="panel" style="margin-bottom:20px">
+      <div class="panel-head">
+        <div class="panel-icon">↗</div>
+        <h2 class="panel-title">Historical AQI — Last 60 Days</h2>
+      </div>
+      <div style="height:360px">
+        <canvas id="chartHistorical"></canvas>
+      </div>
+    </div>
+
+    <!-- Charts 2 & 3 -->
+    <div class="two-col" style="margin-bottom:20px">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">▭</div>
+          <h2 class="panel-title">Monthly Average AQI</h2>
+        </div>
+        <div style="height:280px">
+          <canvas id="chartMonthly"></canvas>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">◎</div>
+          <h2 class="panel-title">AQI Category Distribution</h2>
+        </div>
+        <div style="height:280px">
+          <canvas id="chartDist"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts 4 & 5 -->
+    <div class="two-col">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">⊞</div>
+          <h2 class="panel-title">Pollutant Levels — 30-Day Avg</h2>
+        </div>
+        <div style="height:280px">
+          <canvas id="chartPoll"></canvas>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-icon">⊡</div>
+          <h2 class="panel-title">PM2.5 vs AQI Correlation</h2>
+        </div>
+        <div style="height:280px">
+          <canvas id="chartScatter"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container fc">
+    <span>AQI Forecast System · Random Forest ML · Python + Flask</span>
+    <span>Your real 2024 data · CPCB standard</span>
+  </div>
+</footer>
+
+<script src="/static/js/main.js"></script>
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>
