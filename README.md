@@ -66,3 +66,15 @@ Open your browser and navigate to **`http://127.0.0.1:5000`**.
 - **Backend**: Python 3, Flask, Pandas, NumPy, Scikit-Learn, Joblib
 - **Frontend**: HTML5, Vanilla CSS (Glassmorphism design system), JavaScript, Chart.js
 - **Model**: Random Forest Regressor for time-series feature engineering and multi-pollutant AQI estimation.
+
+
+<img width="1920" height="1080" alt="Screenshot (477)" src="https://github.com/user-attachments/assets/77c84201-4676-4d9a-bbb4-d5f4b2570002" />
+
+<img width="1920" height="1080" alt="Screenshot (478)" src="https://github.com/user-attachments/assets/920be910-ff5f-4557-8279-6e00147d3f1c" />
+
+<img width="766" height="838" alt="Screenshot (479)(1)" src="https://github.com/user-attachments/assets/754752df-b597-4f5f-915c-1f6e0bcc8227" />
+
+<img width="1920" height="1080" alt="Screenshot (482)" src="https://github.com/user-attachments/assets/7e327ea7-2867-4c52-9f37-c56d11572654" />
+
+
+
